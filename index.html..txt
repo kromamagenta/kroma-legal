@@ -1,0 +1,178 @@
+pagina web de Kroma 
+
+HTML
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KROMA MAGENTA | Ecosistema Musical 360</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tipografía Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            black: '#030303',
+                            darkGray: '#0d0d0d',
+                            border: '#1f1f1f',
+                            magenta: '#E1005E',
+                            cyan: '#00F0FF',
+                            purple: '#8B5CF6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-justify-custom { text-align: justify; text-justify: inter-word; }
+    </style>
+</head>
+<body class="bg-brand-black text-white font-sans antialiased selection:bg-brand-magenta selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <div class="flex items-center">
+                <!-- Integración del Logo Vectorial -->
+                <img src="vector logo.jpg" alt="Kroma Magenta Logo" class="h-16 md:h-20 object-contain">
+            </div>
+            <nav class="hidden lg:flex gap-8 text-sm font-bold text-gray-300 uppercase tracking-wider">
+                <a href="#triage" class="hover:text-brand-magenta transition">Concierge</a>
+                <a href="#pilares" class="hover:text-white transition">Divisiones 360</a>
+                <a href="#academy" class="hover:text-brand-cyan transition">Kroma Academy</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO & CONCIERGE (FONDO SILUETA ARTISTA) -->
+    <section id="triage" class="relative pt-40 pb-24 lg:pt-56 lg:pb-32 overflow-hidden flex flex-col items-center justify-center min-h-[95vh]">
+        <!-- Imagen de fondo: Silueta de artista cantando -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1520690280295-8eb479c5332c?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat opacity-40"></div>
+        <!-- Gradiente para oscurecer la imagen y fusionarla con el fondo negro -->
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-black/40 via-brand-black/70 to-brand-black"></div>
+        
+        <!-- Destello sutil magenta -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand-magenta/20 blur-[150px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight uppercase drop-shadow-2xl">
+                Construimos carreras.<br>
+                <span class="bg-gradient-to-r from-brand-magenta via-brand-purple to-brand-cyan bg-clip-text text-transparent">No solo canciones.</span>
+            </h1>
+            <p class="mt-8 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-light text-justify-custom md:text-center drop-shadow-md">
+                El primer ecosistema musical 360 diseñado para blindar, distribuir, producir y monetizar el talento emergente. Bienvenido a Kroma Magenta.
+            </p>
+            
+            <div class="mt-16">
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 drop-shadow-md">¿Qué necesitas hoy para tu carrera?</h3>
+                <!-- Botones de Automatización WhatsApp (Dark Mode) -->
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-stretch">
+                    <!-- Botón 1 -->
+                    <a href="https://wa.me/573000000000?text=Hola%20Kroma%2C%20soy%20Artista%20y%20necesito%20distribuir%20mi%20m%C3%BAsica." target="_blank" 
+                       class="flex-1 px-6 py-5 rounded-xl bg-brand-darkGray/80 backdrop-blur-sm border border-brand-border hover:bg-brand-black hover:border-brand-cyan hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] transition duration-300 text-left">
+                        <span class="block text-3xl mb-3">🎧</span>
+                        <span class="block font-bold text-white text-lg">Quiero lanzar mi música</span>
+                        <span class="block text-xs text-gray-400 mt-1">Distribución y Regalías</span>
+                    </a>
+                    
+                    <!-- Botón 2 -->
+                    <a href="https://wa.me/573000000000?text=Hola%20Kroma%2C%20necesito%20un%20servicio%20legal%20urgente." target="_blank" 
+                       class="flex-1 px-6 py-5 rounded-xl bg-brand-darkGray/80 backdrop-blur-sm border border-brand-border hover:bg-brand-black hover:border-brand-purple hover:shadow-[0_0_20px_rgba(139,92,246,0.2)] transition duration-300 text-left">
+                        <span class="block text-3xl mb-3">⚖️</span>
+                        <span class="block font-bold text-white text-lg">Tengo problemas legales</span>
+                        <span class="block text-xs text-gray-400 mt-1">Saneamiento y Registro</span>
+                    </a>
+
+                    <!-- Botón 3 -->
+                    <a href="https://wa.me/573000000000?text=Hola%20Kroma%2C%20busco%20visuales%2C%20videoclips%20o%20impulso%20para%20mi%20proyecto." target="_blank" 
+                       class="flex-1 px-6 py-5 rounded-xl bg-brand-darkGray/80 backdrop-blur-sm border border-brand-border hover:bg-brand-black hover:border-brand-magenta hover:shadow-[0_0_20px_rgba(225,0,94,0.2)] transition duration-300 text-left">
+                        <span class="block text-3xl mb-3">🎬</span>
+                        <span class="block font-bold text-white text-lg">Busco visuales o videos</span>
+                        <span class="block text-xs text-gray-400 mt-1">Producción y Radares</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOS 4 PILARES 360 -->
+    <section id="pilares" class="py-24 border-t border-brand-border bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-white uppercase tracking-wide mb-16">Nuestras Divisiones</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Distribución -->
+                <div class="p-10 rounded-2xl bg-brand-darkGray border border-brand-border group hover:border-brand-cyan hover:bg-[#0a0a0a] transition duration-500">
+                    <h3 class="text-2xl font-bold text-white uppercase mb-4 flex items-center gap-3">
+                        <span class="text-brand-cyan">01.</span> Kroma Distribución
+                    </h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed text-justify-custom mb-6">
+                        Lleva tu catálogo a más de 150 plataformas a nivel mundial bajo nuestro modelo Label-as-a-Service. Retén el 100% de tus regalías iniciales, utiliza contratos de Split-Sheet automatizados y asegura que tu legado fonográfico nunca sea eliminado de las tiendas.
+                    </p>
+                    <a href="#triage" class="text-brand-cyan text-sm font-bold uppercase tracking-widest hover:underline">Ver Suscripciones</a>
+                </div>
+
+                <!-- Legal Tech -->
+                <div class="p-10 rounded-2xl bg-brand-darkGray border border-brand-border group hover:border-brand-purple hover:bg-[#0a0a0a] transition duration-500">
+                    <h3 class="text-2xl font-bold text-white uppercase mb-4 flex items-center gap-3">
+                        <span class="text-brand-purple">02.</span> Kroma Legal Tech
+                    </h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed text-justify-custom mb-6">
+                        El blindaje corporativo que tu carrera exige. Estructuramos tus derechos de autor mediante registros ante la DNDA, inscripción en sociedades de gestión colectiva (Sayco/Acinpro) y protección de tu marca artística ante la SIC, garantizando un recaudo global.
+                    </p>
+                    <a href="#triage" class="text-brand-purple text-sm font-bold uppercase tracking-widest hover:underline">Consultar Planes</a>
+                </div>
+
+                <!-- Audiovisual -->
+                <div class="p-10 rounded-2xl bg-brand-darkGray border border-brand-border group hover:border-brand-magenta hover:bg-[#0a0a0a] transition duration-500">
+                    <h3 class="text-2xl font-bold text-white uppercase mb-4 flex items-center gap-3">
+                        <span class="text-brand-magenta">03.</span> Kroma Audiovisual
+                    </h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed text-justify-custom mb-6">
+                        Productora in-house enfocada en la creación de identidad visual para plataformas modernas. Desde Visualizers hipnóticos y cortes para TikTok, hasta Live Sessions (Cyphers) y la vitrina colaborativa mensual Radar Emergente.
+                    </p>
+                    <a href="#triage" class="text-brand-magenta text-sm font-bold uppercase tracking-widest hover:underline">Cotizar Producción</a>
+                </div>
+
+                <!-- Sync -->
+                <div class="p-10 rounded-2xl bg-brand-darkGray border border-brand-border group hover:border-white hover:bg-[#0a0a0a] transition duration-500">
+                    <h3 class="text-2xl font-bold text-white uppercase mb-4 flex items-center gap-3">
+                        <span class="text-gray-500 group-hover:text-white transition">04.</span> Kroma Sync
+                    </h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed text-justify-custom mb-6">
+                        La ventanilla única para el sector B2B corporativo. Conectamos nuestro catálogo legalizado con agencias de publicidad, productoras de cine y televisión. Proveemos licencias de sincronización rápidas o producimos pistas a medida (Custom Music).
+                    </p>
+                    <a href="#triage" class="text-white text-sm font-bold uppercase tracking-widest hover:underline">Licencias B2B</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KROMA ACADEMY (Promesa Educativa) -->
+    <section id="academy" class="py-24 border-t border-brand-border bg-[#050505] relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 w-[500px] h-[500px] bg-brand-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-sm font-bold text-brand-magenta uppercase tracking-widest mb-4">Nuestra Promesa 360</h2>
+            <h3 class="text-3xl md:text-5xl font-black text-white leading-tight uppercase">El talento no basta.<br>La educación es tu mejor mánager.</h3>
+            <p class="mt-6 text-gray-400 text-justify-custom md:text-center text-lg font-light leading-relaxed">
+                El Crew de Kroma Magenta no firma contratos a ciegas. Todos nuestros artistas obtienen acceso exclusivo al <strong class="text-white font-bold">Kroma Legal Hub</strong>, una bóveda con modelos de contratos y módulos formativos para entender la industria musical desde adentro. Te educamos en el proceso para que escales con seguridad.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black border-t border-brand-border py-10 text-center text-xs text-gray-600 font-bold uppercase tracking-widest">
+        <p>&copy; 2026 Kroma Magenta Compañía 360. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
